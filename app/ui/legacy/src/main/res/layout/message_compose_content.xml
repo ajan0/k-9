@@ -55,8 +55,11 @@
             android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
             android:imeOptions="actionDone|flagNoEnterAction|flagNoExtractUi"
             android:minLines="3"
+            android:background="@android:color/transparent"
             android:paddingLeft="12dip"
             android:paddingRight="12dip"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             style="@style/ComposeEditTextLarge"
             tools:ignore="InefficientWeight" />
 
