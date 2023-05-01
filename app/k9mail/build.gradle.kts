@@ -45,8 +45,8 @@ android {
         applicationId = "com.fsck.k9"
         testApplicationId = "com.fsck.k9.tests"
 
-        versionCode = 35010
-        versionName = "6.511-SNAPSHOT"
+        versionCode = 37001
+        versionName = "6.702-SNAPSHOT"
 
         // Keep in sync with the resource string array "supported_languages"
         resourceConfigurations.addAll(
@@ -57,6 +57,8 @@ android {
                 "fy",
             ),
         )
+
+        buildConfigField("String", "CLIENT_ID_APP_NAME", "\"K-9 Mail\"")
     }
 
     signingConfigs {

@@ -4,9 +4,11 @@ plugins {
 }
 
 java {
-    sourceCompatibility = ThunderbirdProjectConfig.javaVersion
-    targetCompatibility = ThunderbirdProjectConfig.javaVersion
+    sourceCompatibility = ThunderbirdProjectConfig.javaCompatibilityVersion
+    targetCompatibility = ThunderbirdProjectConfig.javaCompatibilityVersion
 }
+
+configureKotlinJavaCompatibility()
 
 dependencies {
     implementation(libs.bundles.shared.jvm.main)

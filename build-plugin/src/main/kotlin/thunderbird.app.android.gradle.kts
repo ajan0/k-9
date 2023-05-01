@@ -19,7 +19,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = ThunderbirdProjectConfig.javaVersion.toString()
+        jvmTarget = ThunderbirdProjectConfig.javaCompatibilityVersion.toString()
     }
 
     lint {
@@ -35,6 +35,8 @@ android {
 
 dependencies {
     coreLibraryDesugaring(libs.desugar)
+
+    implementation(libs.bundles.shared.jvm.android.app)
 
     testImplementation(libs.bundles.shared.jvm.test)
 }

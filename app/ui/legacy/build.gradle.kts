@@ -1,4 +1,3 @@
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     id(ThunderbirdPlugins.Library.android)
     alias(libs.plugins.kotlin.parcelize)
@@ -6,10 +5,9 @@ plugins {
 
 dependencies {
     api(projects.app.ui.base)
-    debugImplementation(projects.app.ui.setup)
     implementation(projects.app.core)
-    implementation(projects.app.autodiscovery.api)
-    implementation(projects.app.autodiscovery.providersxml)
+    implementation(projects.feature.autodiscovery.api)
+    implementation(projects.feature.autodiscovery.providersxml)
     implementation(projects.mail.common)
     implementation(projects.uiUtils.toolbarBottomSheet)
 
@@ -75,18 +73,9 @@ android {
 
     buildTypes {
         debug {
-            val useNewSetupUi = if (project.hasProperty("k9mail.useNewSetupUi")) {
-                project.property("k9mail.useNewSetupUi").toString()
-            } else {
-                "false"
-            }
-            buildConfigField("boolean", "USE_NEW_SETUP_UI_FOR_ONBOARDING", useNewSetupUi)
-
             manifestPlaceholders["appAuthRedirectScheme"] = "FIXME: override this in your app project"
         }
         release {
-            buildConfigField("boolean", "USE_NEW_SETUP_UI_FOR_ONBOARDING", "false")
-
             manifestPlaceholders["appAuthRedirectScheme"] = "FIXME: override this in your app project"
         }
     }

@@ -1,6 +1,3 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.android.library) apply false
@@ -16,9 +13,6 @@ plugins {
 }
 
 val propertyTestCoverage: String? by extra
-
-val javaVersion = JavaVersion.VERSION_11
-val jvmTargetVersion = JvmTarget.JVM_11
 
 allprojects {
     extra.apply {
@@ -66,14 +60,10 @@ allprojects {
             substitute(module("org.jetbrains.kotlinx:kotlinx-coroutines-android"))
                 .using(
                     module(
-                        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${libs.versions.kotlinCoroutines.get()}",
+                        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${libs.versions.kotlinxCoroutines.get()}",
                     ),
                 )
         }
-    }
-
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = jvmTargetVersion.target
     }
 
     tasks.withType<Test> {
@@ -92,4 +82,9 @@ tasks.register("testsOnCi") {
             .flatten()
             .filterNot { task -> task.name in arrayOf("testDebugUnitTest", "test") },
     )
+}
+
+tasks.named<Wrapper>("wrapper") {
+    gradleVersion = libs.versions.gradle.get()
+    distributionType = Wrapper.DistributionType.ALL
 }

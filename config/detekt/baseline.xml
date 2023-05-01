@@ -120,7 +120,6 @@
     <ID>ImplicitDefaultLocale:SmtpTransport.kt$SmtpTransport$String.format("MAIL FROM:&lt;%s&gt; BODY=8BITMIME", fromAddress)</ID>
     <ID>ImplicitDefaultLocale:SmtpTransport.kt$SmtpTransport$String.format("MAIL FROM:&lt;%s&gt;", fromAddress)</ID>
     <ID>ImplicitDefaultLocale:SmtpTransport.kt$SmtpTransport$String.format("RCPT TO:&lt;%s&gt;", address)</ID>
-    <ID>InvalidPackageDeclaration:Main.kt$package app.k9mail.cli.html.cleaner</ID>
     <ID>LargeClass:MessageList.kt$MessageList : K9ActivityMessageListFragmentListenerMessageViewFragmentListenerMessageViewContainerListenerOnBackStackChangedListenerOnSwitchCompleteListenerPermissionUiHelper</ID>
     <ID>LargeClass:MessageListFragment.kt$MessageListFragment : FragmentConfirmationDialogFragmentListenerMessageListItemActionListener</ID>
     <ID>LargeClass:RealImapConnection.kt$RealImapConnection : ImapConnection</ID>
@@ -183,7 +182,6 @@
     <ID>LongParameterList:RecipientPresenter.kt$RecipientPresenter$( private val context: Context, loaderManager: LoaderManager, private val openPgpApiManager: OpenPgpApiManager, private val recipientMvpView: RecipientMvpView, account: Account, private val composePgpInlineDecider: ComposePgpInlineDecider, private val composePgpEnableByDefaultDecider: ComposePgpEnableByDefaultDecider, private val autocryptStatusInteractor: AutocryptStatusInteractor, private val replyToParser: ReplyToParser, private val draftStateHeaderParser: AutocryptDraftStateHeaderParser, )</ID>
     <ID>LongParameterList:SaveMessageOperationsTest.kt$SaveMessageOperationsTest$( subject: String? = getSubject(), date: Long = sentDate?.time ?: System.currentTimeMillis(), internalDate: Long = date, downloadState: MessageDownloadState = getDownloadState(), attachmentCount: Int = 0, previewResult: PreviewResult = PreviewResult.none(), textForSearchIndex: String? = null, encryptionType: String? = null, )</ID>
     <ID>LongParameterList:SettingsImportViewModel.kt$SavedAccountState$( val accountIndex: Int, val displayName: String, val accountUuid: String, val selected: Boolean, val importStatus: ImportStatus, val incomingServerName: String?, val outgoingServerName: String?, val incomingServerPasswordNeeded: Boolean, val outgoingServerPasswordNeeded: Boolean, )</ID>
-    <ID>LongParameterList:Typography.kt$( h1: TextStyle, h2: TextStyle, h3: TextStyle, h4: TextStyle, h5: TextStyle, h6: TextStyle, subtitle1: TextStyle, subtitle2: TextStyle, body1: TextStyle, body2: TextStyle, button: TextStyle, caption: TextStyle, overline: TextStyle, )</ID>
     <ID>LoopWithTooManyJumpStatements:AccountSetupCheckSettings.kt$AccountSetupCheckSettings$for (subjectAlternativeName in subjectAlternativeNames) { val type = subjectAlternativeName[0] as Int val value: Any? = subjectAlternativeName[1] val name: String = when (type) { 0 -&gt; { Timber.w("SubjectAltName of type OtherName not supported.") continue } 1 -&gt; value as String 2 -&gt; value as String 3 -&gt; { Timber.w("unsupported SubjectAltName of type x400Address") continue } 4 -&gt; { Timber.w("unsupported SubjectAltName of type directoryName") continue } 5 -&gt; { Timber.w("unsupported SubjectAltName of type ediPartyName") continue } 6 -&gt; value as String 7 -&gt; value as String else -&gt; { Timber.w("unsupported SubjectAltName of unknown type") continue } } // if some of the SubjectAltNames match the store or transport -host, display them if (name.equals(incomingServerHost, ignoreCase = true) || name.equals(outgoingServerHost, ignoreCase = true) ) { // TODO: localize this string altNamesText.append("Subject(alt): ").append(name).append(",...\n") } else if (name.startsWith("*.") &amp;&amp; ( incomingServerHost.endsWith(name.substring(2)) || outgoingServerHost.endsWith(name.substring(2)) ) ) { // TODO: localize this string altNamesText.append("Subject(alt): ").append(name).append(",...\n") } }</ID>
     <ID>LoopWithTooManyJumpStatements:HttpUriParser.kt$HttpUriParser$while (currentPos &lt; text.length) { val c = text[currentPos] if (isHexDigit(c)) { shouldBeHex = (shouldBeHex - 1).coerceAtLeast(0) } else if (shouldBeHex == 0) { if (c in allowedCharacters) { // Everything ok here :) } else if (c == '%') { shouldBeHex = 2 } else { break } } else { break } currentPos++ }</ID>
     <ID>LoopWithTooManyJumpStatements:RealImapStore.kt$RealImapStore$for (listResponse in listResponses) { val serverId = listResponse.name if (pathDelimiter == null) { pathDelimiter = listResponse.hierarchyDelimiter combinedPrefix = null } if (RealImapFolder.INBOX.equals(serverId, ignoreCase = true)) { continue } else if (listResponse.hasAttribute("\\NoSelect")) { continue } val name = getFolderDisplayName(serverId) val oldServerId = getOldServerId(serverId) val type = when { listResponse.hasAttribute("\\Archive") -&gt; FolderType.ARCHIVE listResponse.hasAttribute("\\All") -&gt; FolderType.ARCHIVE listResponse.hasAttribute("\\Drafts") -&gt; FolderType.DRAFTS listResponse.hasAttribute("\\Sent") -&gt; FolderType.SENT listResponse.hasAttribute("\\Junk") -&gt; FolderType.SPAM listResponse.hasAttribute("\\Trash") -&gt; FolderType.TRASH else -&gt; FolderType.REGULAR } val existingItem = folderMap[serverId] if (existingItem == null || existingItem.type == FolderType.REGULAR) { folderMap[serverId] = FolderListItem(serverId, name, type, oldServerId) } }</ID>
@@ -462,8 +460,6 @@
     <ID>MagicNumber:ThemeManager.kt$ThemeManager$28</ID>
     <ID>MagicNumber:ThreadMessageOperations.kt$ThreadMessageOperations$3</ID>
     <ID>MagicNumber:TimberLogger.kt$TimberLogger$26</ID>
-    <ID>MagicNumber:Typography.kt$0.5</ID>
-    <ID>MagicNumber:Typography.kt$1.5</ID>
     <ID>MagicNumber:UidValidityResponse.kt$UidValidityResponse.Companion$0xFFFFFFFFL</ID>
     <ID>MagicNumber:Utf8.kt$0x010000</ID>
     <ID>MagicNumber:Utf8.kt$0x10000</ID>
@@ -505,6 +501,7 @@
     <ID>MayBeConst:SummaryNotificationDataCreatorTest.kt$private val TIMESTAMP = 0L</ID>
     <ID>MemberNameEqualsClassName:HtmlModification.kt$HtmlModification.Replace$abstract fun replace(textToHtml: TextToHtml)</ID>
     <ID>MemberNameEqualsClassName:ReplyToView.kt$ReplyToView$private val replyToView: RecipientSelectView = activity.findViewById(R.id.reply_to)</ID>
+    <ID>NestedBlockDepth:AutoconfigParser.kt$AutoconfigParser$private fun parseServer(xpp: XmlPullParser, nodeName: String, email: String): DiscoveredServerSettings</ID>
     <ID>NestedBlockDepth:HttpUriParser.kt$HttpUriParser$private fun tryMatchIpv6Address(text: CharSequence, startPos: Int): Int</ID>
     <ID>NestedBlockDepth:ImapSync.kt$ImapSync$private fun synchronizeMailboxSynchronous(folder: String, syncConfig: SyncConfig, listener: SyncListener)</ID>
     <ID>NestedBlockDepth:MessageList.kt$MessageList$override fun onBackPressed()</ID>
@@ -521,7 +518,6 @@
     <ID>NestedBlockDepth:SingleMessageNotificationCreator.kt$SingleMessageNotificationCreator$private fun NotificationBuilder.setWearActions(notificationData: SingleNotificationData)</ID>
     <ID>NestedBlockDepth:SmtpTransport.kt$SmtpTransport$@VisibleForTesting @Throws(MessagingException::class) internal fun open()</ID>
     <ID>NestedBlockDepth:SummaryNotificationCreator.kt$SummaryNotificationCreator$private fun NotificationBuilder.setWearActions( account: Account, notificationData: SummaryInboxNotificationData, )</ID>
-    <ID>NestedBlockDepth:ThunderbirdAutoconfigParser.kt$ThunderbirdAutoconfigParser$private fun parseServer(xpp: XmlPullParser, nodeName: String, email: String): DiscoveredServerSettings</ID>
     <ID>ReturnCount:AccountSetupBasics.kt$AccountSetupBasics$private fun providersXmlDiscoveryDiscover(email: String): ConnectionSettings?</ID>
     <ID>ReturnCount:AccountSetupBasics.kt$private fun DiscoveredServerSettings.toServerSettings(): ServerSettings?</ID>
     <ID>ReturnCount:AccountSetupCheckSettings.kt$AccountSetupCheckSettings.CheckAccountTask$private fun isCanceled(): Boolean</ID>
@@ -641,7 +637,6 @@
     <ID>SwallowedException:RealImapStore.kt$RealImapStore$e: CharacterCodingException</ID>
     <ID>SwallowedException:RealImapStore.kt$RealImapStore$ioe: IOException</ID>
     <ID>SwallowedException:SaveMessageOperations.kt$SaveMessageOperations$e: IOException</ID>
-    <ID>SwallowedException:SettingsExportViewModel.kt$SettingsExportViewModel$e: Exception</ID>
     <ID>SwallowedException:SettingsExporter.kt$SettingsExporter$e: InvalidSettingValueException</ID>
     <ID>SwallowedException:SettingsListFragment.kt$SettingsListFragment$e: ActivityNotFoundException</ID>
     <ID>SwallowedException:SmtpTransport.kt$SmtpTransport$e: NegativeSmtpReplyException</ID>
@@ -805,7 +800,6 @@
     <ID>UnusedPrivateMember:HttpUriParser.kt$HttpUriParser$i</ID>
     <ID>UnusedPrivateMember:MessageListLoader.kt$MessageListLoader$account: Account</ID>
     <ID>UnusedPrivateMember:MessageViewFragment.kt$MessageViewFragment$requestKey: String</ID>
-    <ID>UnusedPrivateMember:NewSetupUiHack.kt$NewSetupUiHack$builder: SettingsListBuilder</ID>
     <ID>UseCheckOrError:OutboxStateRepository.kt$OutboxStateRepository$throw IllegalStateException("No outbox_state entry for message with id $messageId")</ID>
     <ID>UseCheckOrError:ThemeExtensions.kt$throw IllegalStateException("Couldn't resolve attribute ($attrId)")</ID>
     <ID>UseRequire:MimeParameterEncoder.kt$MimeParameterEncoder$throw IllegalArgumentException("Unsupported character: $c")</ID>

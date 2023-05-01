@@ -22,24 +22,28 @@ rootProject.name = "k-9"
 includeBuild("build-plugin")
 
 include(
+    ":app-feature-preview",
     ":app-ui-catalog",
 )
 
 include(
     ":app:k9mail",
     ":app:ui:base",
-    ":app:ui:setup",
     ":app:ui:legacy",
     ":app:ui:message-list-widget",
     ":app:core",
     ":app:storage",
     ":app:crypto-openpgp",
     ":app:testing",
-    ":app:autodiscovery:api",
-    ":app:autodiscovery:providersxml",
-    ":app:autodiscovery:srvrecords",
-    ":app:autodiscovery:thunderbird",
     ":app:html-cleaner",
+)
+
+include(
+    ":feature:onboarding",
+    ":feature:autodiscovery:api",
+    ":feature:autodiscovery:providersxml",
+    ":feature:autodiscovery:srvrecords",
+    ":feature:autodiscovery:autoconfig",
 )
 
 include(
